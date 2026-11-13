@@ -1,8 +1,6 @@
 # Pixel Chain
 
-Napisaćete čvor: program koji, zajedno sa čvorovima vaših kolega iz tima, održava jedno zajedničko platno od piksela. Niko ne pokreće server i niko nije glavni. Svaki čvor piše druga osoba, možda u drugom jeziku, a ipak svi moraju da prikazuju potpuno istu sliku.
-
-Do kraja, vaša grupa od 4–5 polaznika pokreće sve svoje čvorove zajedno. Rudarite zemljište, bojite ga, trgujete njime — a jedan čvor se nasilno ugasi usred rada i mora da se vrati.
+Napisaćete čvor: program koji, zajedno sa čvorovima vaših kolega iz tima, održava jedno zajedničko platno od piksela. Niko ne pokreće server i niko nije glavni. Svaki čvor piše druga osoba, možda u drugom jeziku, i svi moraju da prikazuju potpuno istu sliku.
 
 ## Ideja ukratko
 
@@ -13,13 +11,13 @@ Do kraja, vaša grupa od 4–5 polaznika pokreće sve svoje čvorove zajedno. Ru
 - **bojenje** — vlasnik postavlja njegovu boju;
 - **prenos** — vlasnik ga daje drugom javnom ključu.
 
-Obe potpisuje trenutni vlasnik zemljišta. Zemljište se razmenjuje za usluge u stvarnom životu — lanac samo beleži ko je vlasnik čega.
+Obe potpisuje trenutni vlasnik zemljišta.
 
 **Blokovi.** Transakcije se skupljaju u blokove. Svaki blok sadrži heš bloka pre njega, pa blokovi čine lanac, a izmena bilo čega u starom bloku pokvari svaki heš posle njega.
 
 **Rudarenje.** Da biste dodali blok, morate da nađete broj (nonce bloka) zbog kog heš bloka počinje određenim brojem nultih bitova. Jedini način da ga nađete je da pokušavate, iznova i iznova. To je *proof of work* (PoW).
 
-**Zemljište.** Rudarenje bloka je jedini način da se pojavi novo zemljište. Heš bloka odlučuje — nasumično — koju parcelu rudar dobija. Niko ne može da bira. Brži računari dobijaju više zemljišta; i to je deo lekcije.
+**Zemljište.** Rudarenje bloka je jedini način da se pojavi novo zemljište. Heš bloka odlučuje — nasumično — koju parcelu rudar dobija kao nagradu. Niko ne može da bira. Brži računari dobijaju više zemljišta; i to je deo lekcije.
 
 **Dogovor.** Svaki čvor kreće od istog prvog bloka (*genesis*), primenjuje iste transakcije istim redosledom, po istim pravilima, i tako završi sa istim platnom. Ponekad dva čvora izrudare blok u isto vreme i lanac se račva — to je *fork*. To je normalno. Pravilo koje to razrešava: **pobeđuje lanac sa najviše akumuliranog rada.**
 
